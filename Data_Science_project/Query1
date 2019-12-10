@@ -1,0 +1,11 @@
+#Query, SQL, Pravosudov database, December 2019
+#Aim: List all the silverbanded chicks from females in 2019
+
+
+SELECT tbl_breeding.P_sex, tbl_breeding.Year, tbl_silverbands.ID, tbl_breeding.RFID
+FROM tbl_breeding
+ON tbl_breeding.RFID = tbl_silverbands.RFID
+WHERE tbl_breeding.year = 2018
+AND tbl_breeding.P_sex = "F"
+AND tbl_silverbands.ID != "NA"
+AND tbl_breeding.RFID != "NA"
